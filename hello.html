@@ -4,34 +4,64 @@
         <title>My Homepage</title>
     </head>
     <style>
-        img{
+        .pics img{
          border:3px solid black ;
          width: 80px;
          height: 100px;
-         text-align: center;
         }
-        #kim {
-            color:red;
+        .content #kim {
+            
+            text-align:center;
         }
         a{
             text-decoration: none;
         }
-        
+        .pics{
+            /*position:absolute;*/
+            left:50%;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:10px;
+            margin-bottom:10px;
+            width:300px;
+            float:top;
+        }
+        .pics::after{
+            content:" ";
+            clear:both;
+            display:block;
+        }
+        .list{
+            margin-left:auto;
+            margin-right:auto;
+            display:table;
+        }
     </style>
     <body>
-        <img src = "passport.jpg" id="passport">
-        <img src = "jw.jpg">
-        <img src = "./jw2.jpg">
-        <br><span id="kim"><u><b>김건현</b></span></u>의 웹페이지
-        <br>바로가기
-        <ul><li><a href = "https://www.youtube.com/watch?v=3iM_06QeZi8
-            &ab_channel=%EC%9D%B4%EC%A7%80%EA%B8%88%5BIUO
-            fficial%5D" target="_blank">YOUTUBE</a></li>
-            <li><a href = "https://www.fmkorea.com" target="_blank">FM KOREA</a></li>
-            <li><a href = "https://www.google.com" target="_blank">Google</a></li>
-            <li><a href = "https://www.chosun.ac.kr/user/indexMain.do?home=&siteId=ce" target = "_blank">chosun univ</a></li>
-        </ul>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3iM_06QeZi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class= "content">
+            <div class="pics">
+                <img src = "passport.jpg" id="passport">
+                <img src = "jw.jpg">
+                <img src = "./jw2.jpg">
+                
+            </div>
+            <div id="kim"><u><b>김건현</b></u>의 <i>웹페이지</i>
+            <br>바로가기
+            <br><ul class="list"><li><a href = "https://www.youtube.com/watch?v=3iM_06QeZi8
+                &ab_channel=%EC%9D%B4%EC%A7%80%EA%B8%88%5BIUO
+                fficial%5D" target="_blank">YOUTUBE</a></li>
+                <li><a href = "https://www.fmkorea.com" target="_blank">FM KOREA</a></li>
+                <li><a href = "https://www.google.com" target="_blank">Google</a></li>
+                <li><a href = "https://www.chosun.ac.kr/user/indexMain.do?home=&siteId=ce" target = "_blank">chosun univ</a></li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3iM_06QeZi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+            
+        </div>
+        
+        
+        
+        
     </body>
 
 </html>
